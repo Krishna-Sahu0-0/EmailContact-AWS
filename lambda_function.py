@@ -1,10 +1,11 @@
 import json
 import smtplib
+import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-COMPANY_EMAIL = "ks9379657@gmail.com"
-APP_PASSWORD = "izln mrqm ombj xvre"
+COMPANY_EMAIL = os.environ.get("COMPANY_EMAIL")
+APP_PASSWORD = os.environ.get("APP_PASSWORD")
 
 def lambda_handler(event, context):
 
